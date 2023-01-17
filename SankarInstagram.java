@@ -40,7 +40,7 @@ public class SankarInstagram extends JPanel {
 		// create the frame
 		JFrame myFrame = new JFrame();
 		myFrame.setTitle("Instagram");
-		myFrame.setSize(1200, 800);
+		myFrame.setSize(1920, 1080);
 		myFrame.setBackground(Color.white);
 		myFrame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
@@ -61,10 +61,10 @@ public class SankarInstagram extends JPanel {
 	public SankarInstagram() {
 		// read in all of the necessary files
 		try {
-			original = ImageIO.read(new File("tree.jpg"));
-			filtered = ImageIO.read(new File("filteredTree.png"));
-			image1 = ImageIO.read(new File("box.png"));
-			image2 = ImageIO.read(new File("flower.jpg"));
+			original = ImageIO.read(new File("pictures/tree.jpg"));
+			filtered = ImageIO.read(new File("pictures/filteredTree.png"));
+			image1 = ImageIO.read(new File("pictures/box.png"));
+			image2 = ImageIO.read(new File("pictures/flower.jpg"));
 		} catch (IOException ex) {// case if the compiler doesn't locate the required file
 			System.out.println("File not Found!");
 			System.exit(0);// exit program if file is not found
@@ -173,8 +173,8 @@ public class SankarInstagram extends JPanel {
 		// create image for the modified image to be stored
 		BufferedImage withBorder = b;
 		try {// read in the border images
-			topBorder = ImageIO.read(new File("topBorder.png"));
-			bottomBorder = ImageIO.read(new File("bottomBorder.png"));
+			topBorder = ImageIO.read(new File("pictures/topBorder.png"));
+			bottomBorder = ImageIO.read(new File("pictures/bottomBorder.png"));
 		} catch (IOException ex) {
 			System.out.println("File not Found!");
 			System.exit(0);
